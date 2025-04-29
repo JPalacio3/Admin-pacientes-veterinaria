@@ -41,7 +41,7 @@ export default function PatientForm() {
             })}
           />
 
-          {errors.name && <Error>{errors.name?.message?.toString()}</Error>}
+          {errors.name && <Error>{errors.name?.message}</Error>}
         </div>
 
         <div className="mb-5">
@@ -78,7 +78,7 @@ export default function PatientForm() {
               },
             })}
           />
-          {errors.email && <Error>{errors.email?.message?.toString()}</Error>}
+          {errors.email && <Error>{errors.email?.message}</Error>}
         </div>
 
         <div className="mb-5">
@@ -93,7 +93,7 @@ export default function PatientForm() {
               required: "La fecha de alta es obligatoria",
             })}
           />
-          {errors.date && <Error>{errors.date?.message?.toString()}</Error>}
+          {errors.date && <Error>{errors.date?.message}</Error>}
         </div>
 
         <div className="mb-5">
@@ -115,9 +115,7 @@ export default function PatientForm() {
               target.style.height = `${target.scrollHeight}px`;
             }}
           ></textarea>
-          {errors.symptoms && (
-            <Error>{errors.symptoms?.message?.toString()}</Error>
-          )}
+          {errors.symptoms && <Error>{errors.symptoms?.message}</Error>}
         </div>
 
         <input
