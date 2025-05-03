@@ -7,7 +7,10 @@ type PatientDetailProps = {
 
 export default function PatientDetails({ patient }: PatientDetailProps) {
   return (
-    <div className="mx-5 my-10 px-5 py-10 bg-white shadow-md rounded-xl">
+    <div
+      className="mx-5 my-10 px-5 py-10 bg-white shadow-md rounded-xl
+    hover:ease-in-out hover:duration-300 hover:scale-105 cursor-pointer"
+    >
       <PatientDetailItem label="ID" data={patient.id} />
       <PatientDetailItem label="Nombre" data={patient.name} />
       <PatientDetailItem label="Propietario" data={patient.caretaker} />
