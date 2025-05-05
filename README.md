@@ -1,6 +1,6 @@
 # Administrador de Pacientes
 
-![Vista del Sitio](public/admin-img.jpg)
+![Vista del Sitio](./public/admin-img.jpg)
 
 Este proyecto es una aplicación web desarrollada con **React**, **TypeScript** y **Vite**. La aplicación permite gestionar pacientes y sus citas de manera eficiente, proporcionando una interfaz intuitiva y funcional.
 
@@ -49,7 +49,7 @@ El proyecto está organizado de la siguiente manera:
 
 La imagen a continuación muestra cómo se ve la aplicación en la web:
 
-![Vista del Sitio](public/admin-img.jpg)
+![Vista del Sitio](./public/admin-img.jpg)
 
 ## Contribuciones
 
