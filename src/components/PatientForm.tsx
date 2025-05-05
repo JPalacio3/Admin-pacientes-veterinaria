@@ -33,6 +33,7 @@ export default function PatientForm() {
   const registerPatient = (data: DraftPatient) => {
     if (activeId) {
       updatePatient(data);
+
       toast.info("Paciente Actualizado correctamente", {
         position: "top-center",
         autoClose: 1000,
@@ -46,6 +47,7 @@ export default function PatientForm() {
       });
     } else {
       addPatient(data);
+
       toast.success("Paciente Agregado correctamente", {
         position: "top-center",
         autoClose: 1000,
