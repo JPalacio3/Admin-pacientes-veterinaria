@@ -49,7 +49,7 @@ El proyecto está organizado de la siguiente manera:
 
 Haz clic en la imagen para visitar el sitio en producción:
 
-[![Ir a SEGUIMIENTO DE PACIENTES VETERINARIA]](https://admin-pacientesveterinaria.netlify.app)
+[Ir a SEGUIMIENTO DE PACIENTES VETERINARIA](https://admin-pacientesveterinaria.netlify.app)
 
 ## Contribuciones
 
