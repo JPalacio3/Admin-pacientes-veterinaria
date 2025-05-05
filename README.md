@@ -1,6 +1,6 @@
 # Administrador de Pacientes
 
-![Vista del Sitio](./public/admin-img.jpg)
+[![Vista del Sitio](public/admin-img.jpg)](https://admin-pacientesveterinaria.netlify.app)
 
 Este proyecto es una aplicación web desarrollada con **React**, **TypeScript** y **Vite**. La aplicación permite gestionar pacientes y sus citas de manera eficiente, proporcionando una interfaz intuitiva y funcional.
 
@@ -47,7 +47,9 @@ El proyecto está organizado de la siguiente manera:
 
 ## Vista Previa
 
-La imagen a continuación muestra cómo se ve la aplicación en la web:
+Haz clic en la imagen para visitar el sitio en producción:
+
+[![Ir a SEGUIMIENTO DE PACIENTES VETERINARIA]](https://admin-pacientesveterinaria.netlify.app)
 
 ## Contribuciones
 
