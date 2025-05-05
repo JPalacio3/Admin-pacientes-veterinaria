@@ -49,8 +49,6 @@ El proyecto está organizado de la siguiente manera:
 
 La imagen a continuación muestra cómo se ve la aplicación en la web:
 
-![Vista del Sitio](./public/admin-img.jpg)
-
 ## Contribuciones
 
 Si deseas contribuir a este proyecto, por favor realiza un fork del repositorio, crea una rama con tus cambios y envía un pull request. ¡Toda contribución es bienvenida!
