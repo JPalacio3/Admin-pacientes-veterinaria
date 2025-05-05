@@ -1,6 +1,7 @@
 import { Patient } from "../types";
 import PatientDetailItem from "./PatientDetailItem";
 import { usePatientSore } from "../store";
+import { Bounce, toast } from "react-toastify";
 
 type PatientDetailProps = {
   patient: Patient;
@@ -40,6 +41,17 @@ export default function PatientDetails({ patient }: PatientDetailProps) {
          text-white font-bold uppercase rounded-lg "
           onClick={() => {
             deletePatient(patient.id);
+            toast.error("Paciente eliminado", {
+              position: "top-center",
+              autoClose: 2000,
+              hideProgressBar: false,
+              closeOnClick: false,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+              transition: Bounce,
+            });
           }}
         >
           Eliminar

@@ -1,8 +1,10 @@
 import { useForm } from "react-hook-form";
+
 import Error from "./Error";
 import type { DraftPatient } from "../types/index";
 import { usePatientSore } from "../store";
 import { useEffect } from "react";
+import { Bounce, toast } from "react-toastify";
 
 export default function PatientForm() {
   const { addPatient, activeId, patients, updatePatient } = usePatientSore();
@@ -12,7 +14,7 @@ export default function PatientForm() {
     handleSubmit,
     setValue,
     formState: { errors },
-    // reset,
+    reset,
   } = useForm<DraftPatient>();
 
   useEffect(() => {
@@ -30,11 +32,34 @@ export default function PatientForm() {
   const registerPatient = (data: DraftPatient) => {
     if (activeId) {
       updatePatient(data);
+      toast.info("Paciente Actualizado correctamente", {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce,
+      });
+
       return;
     } else {
       addPatient(data);
+      toast.success("Paciente Agregado correctamente", {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+      });
     }
-    // reset();
+    reset();
   };
 
   return (
@@ -146,7 +171,7 @@ export default function PatientForm() {
           type="submit"
           className="bg-indigo-600 w-full p-3 text-white uppercase font-bold
           hover:bg-indigo-700 cursor-pointer transition-colors rounded-lg"
-          value="Guardar Paciente"
+          value={activeId ? "Actualizar Paciente" : "Agregar Paciente"}
         />
       </form>
     </div>
