@@ -14,7 +14,7 @@ export default function PatientDetails({ patient }: PatientDetailProps) {
   return (
     <div
       className="mx-5 my-10 px-5 py-10 bg-white shadow-md rounded-xl
-    cursor-pointer"
+    cursor-pointer hover:drop-shadow-lg hover:scale-105 transition-all "
     >
       <PatientDetailItem label="ID" data={patient.id} />
       <PatientDetailItem label="Nombre" data={patient.name} />
