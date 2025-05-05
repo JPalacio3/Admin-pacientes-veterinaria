@@ -1,54 +1,56 @@
-# React + TypeScript + Vite
+# Administrador de Pacientes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Vista del Sitio](public/admin-img.jpg)
 
-Currently, two official plugins are available:
+Este proyecto es una aplicación web desarrollada con **React**, **TypeScript** y **Vite**. La aplicación permite gestionar pacientes y sus citas de manera eficiente, proporcionando una interfaz intuitiva y funcional.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades
 
-## Expanding the ESLint configuration
+- **Listado de Pacientes:** Visualiza una lista de pacientes registrados con sus detalles.
+- **Agregar Pacientes:** Permite registrar nuevos pacientes con información como nombre, propietario, email, fecha de alta y síntomas.
+- **Editar Pacientes:** Actualiza la información de un paciente existente.
+- **Eliminar Pacientes:** Elimina pacientes de la lista con confirmación visual.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tecnologías Usadas
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **React:** Biblioteca para construir interfaces de usuario.
+- **TypeScript:** Superset de JavaScript que añade tipado estático.
+- **Vite:** Herramienta de desarrollo rápida para aplicaciones modernas.
+- **Tailwind CSS:** Framework de CSS para estilos rápidos y personalizados.
+- **Zustand:** Librería para manejo de estado global.
+- **React Toastify:** Para notificaciones visuales.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Estructura del Proyecto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+El proyecto está organizado de la siguiente manera:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **src/components:** Contiene los componentes reutilizables como `PatientDetail`, `PatientForm`, `PatientList`, etc.
+- **src/store:** Implementa el manejo de estado global con Zustand.
+- **src/types:** Define los tipos utilizados en la aplicación.
+- **public:** Contiene recursos estáticos como imágenes.
+
+## Cómo Ejecutar el Proyecto
+
+1. Clona el repositorio:
+   ```bash
+   git clone <url-del-repositorio>
+   ```
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+4. Abre la aplicación en tu navegador en `http://localhost:3000`.
+
+## Vista Previa
+
+La imagen a continuación muestra cómo se ve la aplicación en la web:
+
+![Vista del Sitio](public/admin-img.jpg)
+
+## Contribuciones
+
+Si deseas contribuir a este proyecto, por favor realiza un fork del repositorio, crea una rama con tus cambios y envía un pull request. ¡Toda contribución es bienvenida!
