@@ -24,6 +24,7 @@ export default function PatientForm() {
       )[0];
       setValue("name", activePatient.name);
       setValue("caretaker", activePatient.caretaker);
+      setValue("date", activePatient.date);
       setValue("email", activePatient.email);
       setValue("symptoms", activePatient.symptoms);
     }
@@ -43,8 +44,6 @@ export default function PatientForm() {
         theme: "colored",
         transition: Bounce,
       });
-
-      return;
     } else {
       addPatient(data);
       toast.success("Paciente Agregado correctamente", {
